@@ -33,10 +33,10 @@ npm run start # API exposed at localhost:3000
     - Event is stored
     - Version of transaction is stores
 
-/transaction?user=vegard
+/transaction?user=USERNAME
 - List active transactionstate on user
 
-/transaction/events?user=vegard
+/transaction/events?user=USERNAME
 - List all events connected to the transaction and user.
 
 /transaction/versions?user=USERNAME
