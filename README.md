@@ -20,9 +20,11 @@ DB
 # Install dependencies
 npm i 
 
-# Run application
-npm run start # API exposed at localhost:3000
+# Start local kafka with kafkadrop
+cd kafka-dokcer && docker-compose up -d
 
+# Run application
+npm run dev # API exposed at localhost:3000
 ```
 
 ## Functinality
@@ -41,3 +43,5 @@ npm run start # API exposed at localhost:3000
 
 /transaction/versions?user=USERNAME
 - List transactions with all versions
+
+
