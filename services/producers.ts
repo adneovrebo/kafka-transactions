@@ -15,8 +15,8 @@ export const produceTransaction = async (amount: number, user: string) => {
         value: JSON.stringify({
           date: new Date(),
           value: amount,
+          username: user,
         }),
-        key: user,
       },
     ],
   });

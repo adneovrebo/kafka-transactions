@@ -1,10 +1,15 @@
 import dotenv from "dotenv";
-dotenv.config();
+import { isDevelop } from "./utils/isDevelop";
+
+dotenv.config({
+  path: isDevelop ? ".env.development" : ".env",
+});
 
 import { runAPI } from "./services/API";
 import { runConsumers } from "./services/consumers";
 import { initDB } from "./services/mongoDB";
 import { initProducer } from "./services/producers";
+import "./models/index";
 
 const init = async () => {
   await initDB();

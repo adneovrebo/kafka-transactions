@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "tsc index.ts --esModuleInterop && node index.js",
+    "start": "tsc index.ts --esModuleInterop --skipLibCheck --outDir dist && NODE_ENV=production node ./dist/index.js",
+    "start:dev": "tsc index.ts --esModuleInterop --skipLibCheck --outDir dist && NODE_ENV=development node ./dist/index.js",
     "dev": "nodemon"
   },
   "license": "MIT",
@@ -22,6 +23,8 @@
     "jsonwebtoken": "^8.5.1",
     "kafkajs": "^1.15.0",
     "mongodb": "^4.1.0",
+    "mongoose": "^5.13.7",
+    "mongoose-history": "^0.8.0",
     "nodemon": "^2.0.12",
     "swagger-ui-express": "^4.1.6",
     "ts-node": "^10.2.0"

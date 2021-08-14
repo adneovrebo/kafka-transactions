@@ -4,7 +4,7 @@ import { produceTransaction } from "../producers";
 import { Authenticate } from "../../middleware/auth";
 
 export const initTransaction = (api: Express) => {
-  api.get("/putTransaction", Authenticate, async (req, res) => {
+  api.get("/putTransaction", async (req, res) => {
     const amount = req.query.amount;
     const user = req.query.user?.toString();
     if (Number(amount) && user) {

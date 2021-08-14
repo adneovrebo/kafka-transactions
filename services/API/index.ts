@@ -1,15 +1,12 @@
 import express from "express";
-import swaggerUi from "swagger-ui-express";
 import { initAuth } from "./auth";
 import { initTransaction } from "./transaction";
 
-const swaggerDocument = require("./swagger.json");
 const api = express();
 const API_PORT = 3000;
 
 api.use(express.json());
-api.use(express.urlencoded());
-api.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+api.use(express.urlencoded({ extended: true }));
 
 api.get("/", async (req, res) => {
   res.sendStatus(200);
