@@ -1,0 +1,21 @@
+{
+  "title": "Kafka transaction konsumer example",
+  "description": "Fun project for testing kafka and it's powerful eventstreaming",
+  "termsOfService": "http://noterms.com/",
+  "contact": {
+    "name": "API Support",
+    "url": "http://www.nosupport.com/support",
+    "email": "adne.ovrebo@hotmail.com"
+  },
+  "license": {
+    "name": "Apache 2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+  },
+  "swagger": "2.0",
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Development server"
+    }
+  ]
+}
